@@ -1,0 +1,16 @@
+apply plugin: 'scala'
+apply plugin: 'application'
+
+mainClassName = 'ancienthelmet.client.Main'
+
+dependencies {
+    compile group: 'org.scala-lang', name: 'scala-library', version: '2.12.2'
+    compile group: 'com.typesafe.akka', name: 'akka-actor_2.12', version: '2.5.3'
+    compile group: 'com.typesafe.akka', name: 'akka-stream_2.12', version: '2.5.3'
+    project(':ancienthelmet-api')
+    project(':ancienthelmet-assets')
+    compile group: 'org.jmonkeyengine', name: 'jme3-core', version: '3.1.0-stable'
+    compile group: 'org.jmonkeyengine', name: 'jme3-desktop', version: '3.1.0-stable'
+    compile group: 'org.jmonkeyengine', name: 'jme3-lwjgl3', version: '3.1.0-stable'
+}
+
